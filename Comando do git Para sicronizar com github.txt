@@ -1,0 +1,47 @@
+
+Configurar o Git para usar com o GitHub é um processo simples. Aqui estão os passos que você deve seguir:
+1. 
+Configurar seu nome de usuário e e-mail:
+Sh
+Copiar código
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@exemplo.com"
+2. 
+Gerar uma chave SSH (se você ainda não tiver uma):
+Sh
+Copiar código
+ssh-keygen -t ed25519 -C "seuemail@exemplo.com"
+Siga as instruções para salvar a chave em seu diretório padrão.
+3. 
+Adicionar a chave SSH ao agente SSH:
+Sh
+Copiar código
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+4. 
+Adicionar sua chave SSH ao GitHub:
+• 
+Copie a chave SSH para a área de transferência:
+Sh
+Copiar código
+cat ~/.ssh/id_ed25519.pub
+• 
+Vá para GitHub, acesse Settings > SSH and GPG keys > New SSH key, cole a chave e salve.
+5. 
+Clonar um repositório:
+Sh
+Copiar código
+git clone git@github.com:username/repo.git
+Substitua username pelo seu nome de usuário do GitHub e repo pelo nome do repositório que você quer clonar.
+6. 
+Adicionar seu repositório remoto (se já tiver um repositório local):
+Sh
+Copiar código
+git remote add origin git@github.com:username/repo.git
+7. 
+Enviar suas alterações para o GitHub:
+Sh
+Copiar código
+git add .
+git commit -m "Mensagem do commit"
+git push origin main

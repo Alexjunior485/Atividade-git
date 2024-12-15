@@ -1,0 +1,22 @@
+
+Comando para configurar o nome do usuário: git config global user.name "Colocar o nome de usuário do GitHub."
+
+comando para configurar o email no git: git config --global user.email alex.gomes@zup.com.br
+
+Comando para definir o vsCode como editor padrão do git: git config --global core.editor "code --wait"
+
+Comando para gerar a chave ssh no git: ssh-keygen -t rsa -b 4096 -C "alex.gomes@zup.com.br"
+
+comando para criar um repositório local do git: git init
+
+comando para adicionar um arquivo ao stagin do git: git add "pode ser feito de duas maneiras."
+para adicionar todos os arquivos é o git add .
+se for para adicionar um arquivo expecifico como por um exemplo um arquivo chamado arquivo.txt o comando seria: git add arquivo.txt.
+
+comando para adicionar um commit ao código: git commit -m "Aqui coloque a mensagem desejada".
+
+comando para ver os logs como mensagens e alterações: git log
+
+comando para gerar um apelido: git config --global alias."apelido do comando" "comando desejado".
+para exemplificar melhor, se eu quero criar um apelido para o comando status por um exemplo e o apelido será st, o comando ficaria assim: git config --global alias.st status
+
